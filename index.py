@@ -68,25 +68,38 @@ def admin():
 
 
 #====================================================selection page=====================================
+    def student():
+        std_content = Frame(admin, width=width, height=height, bg='white')
+        std_content.place(relx=0, rely=0.1)
+        side_nav = Frame(std_content,width=230, height=height, bg='white',bd = 2,relief =RAISED)
+        side_nav.place(relx = 0,rely =0.01)
+        sign = Label(side_nav,text = '@brakobby',font = ('arial',12),bg ="white",fg ="red")
+        sign.place(relx = 0.3,rely = 0.82)
+
     student_img = Button(content,bg= 'white',relief = RAISED,bd =0)
     image_file = PhotoImage(file ='utility//untitled-1.png')
     student_img.config(image =image_file)
     student_img.place(relx = 0.2,rely =0.28)
-    btn_lbl_1 =Button(content,text = 'Student',font = ('arial',18),bg ="white",fg ="black",bd =0)
+    btn_lbl_1 =Label(content,text = 'Student',font = ('arial',18),bg ="white",fg ="black",bd =0)
     btn_lbl_1.place(relx =0.23,rely =0.6 )
+    student_img.config(command = student)
 
     admin_img = Button(content, bg='white', relief=RAISED, bd=0)
     admin_file = PhotoImage(file='utility//untitled-1.png')
     admin_img.config(image=admin_file)
     admin_img.place(relx=0.6, rely=0.28)
-    btn_lbl_2 = Button(content, text='Admin', font=('arial', 18), bg="white", fg="black", bd=0)
+    btn_lbl_2 = Label(content, text='Admin', font=('arial', 18), bg="white", fg="black", bd=0)
     btn_lbl_2.place(relx=0.63, rely=0.6)
+    admin_img.config(command = administrator)
+
 
 
     admin.resizable(False,False)
     admin.mainloop()
 
 
+def administrator():
+    pass
 
 main.resizable(False,False)
 main.mainloop()
