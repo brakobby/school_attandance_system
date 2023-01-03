@@ -5,6 +5,7 @@ from tkinter.ttk import Progressbar
 import os
 import sys
 #=================================================setting up window=====================================================
+
 main = Tk()
 #image = PhotoImage(file =" asserts//background.png")
 height = 430
@@ -37,6 +38,23 @@ def load():
         progress_label.after(1000,load)
         progress_bar['value'] = 10*i
         i += 1
+
+        if progress_bar['value']==100:
+            main.destroy()
+
+            admin()
+
+def admin():
+    admin =Tk()
+
+    height = 780
+    width = 870
+    x = (admin.winfo_screenwidth() // 2) - (width // 2)
+    y = (admin.winfo_screenheight() // 2) - (height // 2)
+    admin.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+    #admin.overrideredirect(True)
+    admin.config(background="#2f6c60")
+    admin.mainloop()
 
 
 
