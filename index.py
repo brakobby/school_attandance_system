@@ -35,7 +35,7 @@ def load():
     if i <=10:
         txt="Please wait..."+(str(10*i)+'%')
         progress_label.config(text=txt)
-        progress_label.after(1000,load)
+        progress_label.after(100,load)
         progress_bar['value'] = 10*i
         i += 1
 
@@ -44,24 +44,36 @@ def load():
 
             admin()
 
+load()
 def admin():
     admin =Tk()
 
-    height = 780
-    width = 870
+    height = 600
+    width = 700
     x = (admin.winfo_screenwidth() // 2) - (width // 2)
     y = (admin.winfo_screenheight() // 2) - (height // 2)
     admin.geometry('{}x{}+{}+{}'.format(width, height, x, y))
     #admin.overrideredirect(True)
     admin.config(background="#2f6c60")
+    #login_frame = Frame(admin,width = 300,height = 400,bg = "white",relief = RAISED)
+    #login_frame.place(relx = 0.28,rely = 0.2)
+
+#====================================================selection page=====================================
+    student_img = Button(admin,bg= 'white',relief = RAISED,bd =3)
+    image_file = PhotoImage(file ='utility//std.png')
+    student_img.config(image =image_file)
+    student_img.place(relx = 0.2,rely =0.4)
+
+    admin_img = Button(admin, bg='white', relief=RAISED, bd=3)
+    admin_file = PhotoImage(file='utility//untitled-1.png')
+    admin_img.config(image=admin_file)
+    admin_img.place(relx=0.6, rely=0.4)
+
+
+
     admin.mainloop()
 
 
-
-
-
-
-load()
 
 main.resizable(False,False)
 main.mainloop()
