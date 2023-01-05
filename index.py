@@ -114,7 +114,7 @@ def administrator():
     pass
 
 def exit():
-    print("helloworld")
+    pass
 
 main.resizable(False,False)
 main.mainloop()
