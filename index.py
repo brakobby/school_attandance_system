@@ -75,6 +75,19 @@ def admin():
         side_nav.place(relx = 0,rely =0.01)
         sign = Label(side_nav,text = '@brakobby',font = ('arial',12),bg ="white",fg ="red")
         sign.place(relx = 0.3,rely = 0.82)
+        """avatar_label_image = Label(side_nav,bg ="black")
+        avatar_image = PhotoImage(file ="utility//logo.png")
+        avatar_label_image.config(image = avatar_image)
+        avatar_label_image.place(relx = 0.02,rely = 0.05)"""
+    #======================================regidtratiion and passport frame================================================
+        reg_frame = Frame(std_content,width = width-230,height = height,bg ="navajowhite")
+        reg_frame.place(relx=0.33,rely = 0)
+        passport_frame = Frame(reg_frame,width=140,height = 160,bd = 2,relief = SUNKEN)
+        passport_frame.place(relx =0.33,rely = 0.05)
+        passprt_btn = Button(reg_frame,text = "Upload Passport-size photo",bd = 0,bg= "navajowhite",fg = 'red',font = ('arial',10,'bold'))
+        passprt_btn.place(relx = 0.28,rely = 0.35)
+    #==================================labels and Entries==================================================
+        student_id = Label(reg_frame,text = 'Student Id',bg = "navajowhite",fg = "black",)
 
     student_img = Button(content,bg= 'white',relief = RAISED,bd =0)
     image_file = PhotoImage(file ='utility//untitled-1.png')
@@ -99,6 +112,9 @@ def admin():
 
 
 def administrator():
+    pass
+
+def exit():
     pass
 
 main.resizable(False,False)
