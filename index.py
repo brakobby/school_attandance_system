@@ -106,7 +106,6 @@ def admin():
     admin_img.config(command = administrator)
 
 
-
     admin.resizable(False,False)
     admin.mainloop()
 
@@ -115,7 +114,7 @@ def administrator():
     pass
 
 def exit():
-    pass
+    print("helloworld")
 
 main.resizable(False,False)
 main.mainloop()
