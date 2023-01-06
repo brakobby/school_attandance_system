@@ -75,10 +75,10 @@ def admin():
         side_nav.place(relx = 0,rely =0.01)
         sign = Label(side_nav,text = '@brakobby',font = ('arial',12),bg ="white",fg ="red")
         sign.place(relx = 0.3,rely = 0.82)
-        """avatar_label_image = Label(side_nav,bg ="black")
-        avatar_image = PhotoImage(file ="utility//logo.png")
+        avatar_label_image = Label(side_nav)
+        avatar_image = PhotoImage(file = 'utility//id.png')
         avatar_label_image.config(image = avatar_image)
-        avatar_label_image.place(relx = 0.02,rely = 0.05)"""
+        avatar_label_image.place(relx = 0.02,rely = 0.05)
     #======================================regidtratiion and passport frame================================================
         reg_frame = Frame(std_content,width = width-230,height = height,bg ="navajowhite")
         reg_frame.place(relx=0.33,rely = 0)
@@ -87,7 +87,34 @@ def admin():
         passprt_btn = Button(reg_frame,text = "Upload Passport-size photo",bd = 0,bg= "navajowhite",fg = 'red',font = ('arial',10,'bold'))
         passprt_btn.place(relx = 0.28,rely = 0.35)
     #==================================labels and Entries==================================================
-        student_id = Label(reg_frame,text = 'Student Id',bg = "navajowhite",fg = "black",)
+        student_id = Label(reg_frame,text = 'Student Id',bg = "navajowhite",fg = "black",font = ("arial",14))
+        student_id.place(relx =0.05,rely = 0.45)
+        entry_1 = Entry(reg_frame,font = ("arial",14),fg ="black",)
+        entry_1.place(relx =0.3,rely =0.45)
+        student_name = Label(reg_frame, text='Name', bg="navajowhite", fg="black", font=("arial", 14))
+        student_name.place(relx=0.05, rely=0.52)
+        entry_2 = Entry(reg_frame, font=("arial", 14), fg="black",)
+        entry_2.place(relx=0.3, rely=0.52)
+        student_dob = Label(reg_frame, text='Date Of Birth', bg="navajowhite", fg="black", font=("arial", 14))
+        student_dob.place(relx=0.05, rely=0.59)
+        entry_3 = Entry(reg_frame, font=("arial", 14), fg="black" )
+        entry_3.place(relx=0.3, rely=0.59)
+        student_gender = Label(reg_frame, text='Gender', fg="black", font=("arial", 14),bg="navajowhite")
+        student_gender.place(relx=0.05, rely=0.66)
+        entry_4 = ttk.Combobox(reg_frame, font=("arial", 14), value= ("Male","Female","Others"),width = 18)
+        entry_4.place(relx=0.3, rely=0.66)
+        student_contact = Label(reg_frame, text='Contact Info', fg="black", font=("arial", 14),bg="navajowhite")
+        student_contact.place(relx=0.05, rely=0.73)
+        entry_4 = Entry(reg_frame, font=("arial", 14), fg="black", )
+        entry_4.place(relx=0.3, rely=0.73)
+
+    #===================================BUTTONS=================================================================================
+        submit = Button(reg_frame,text= "SUBMIT",font = ("arial",14,"bold"),bg ="navajowhite")
+        submit.place(relx = 0.27,rely = 0.8)
+        reset = Button(reg_frame, text="RESET", font=("arial", 14, "bold"), bg="navajowhite")
+        reset.place(relx=0.5, rely=0.8)
+
+
 
     student_img = Button(content,bg= 'white',relief = RAISED,bd =0)
     image_file = PhotoImage(file ='utility//untitled-1.png')
